@@ -1,2 +1,0 @@
-webpackJsonp([0],{130:function(e,t,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=l(0),a=l.n(n),o=function(){return a.a.createElement("div",{className:"SlowNetwork"},a.a.createElement("h1",null,"Hello, SlowNetwork!"))};t.default=o}});
-//# sourceMappingURL=0.aa78decb.chunk.js.map
