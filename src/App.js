@@ -15,7 +15,16 @@ const App = ({ pages }) => (
     <hr className="p-2" />
     <LinksTable pages={pages} />
     <h3>Content</h3>
-    <Routes />
+    <div
+      style={{
+        border: '3px solid #000',
+        borderRadius: '10px',
+        margin: '15px',
+        padding: '35px',
+      }}
+    >
+      <Routes />
+    </div>
   </div>
 )
 
