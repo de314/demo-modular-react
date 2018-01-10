@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CustomLoadingComponent = ({}) => (
+const CustomLoadingComponent = () => (
   <div className="CustomLoadingComponent">
     <h1>LOADING!!!</h1>
     <ul className="fa-ul">

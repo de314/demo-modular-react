@@ -1,15 +1,10 @@
 import React from 'react'
 import store from './rdx/store'
-import {
-  pageRegistered,
-  pageRequested,
-  pageLoaded,
-  pageRendered,
-} from './rdx/actions'
+import { pageRegistered, pageRequested, pageLoaded } from './rdx/actions'
 
 import asAsync from './asAsync'
 
-import { Link, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import CustomLoadingComponent from './demo/CustomLoadingComponent'
 import Home from './pages/Home'
 

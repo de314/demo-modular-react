@@ -1,16 +1,18 @@
 import React from 'react'
 import _ from 'lodash'
+import moment from 'moment'
 
 import { Link } from 'react-router-dom'
 
-const LinkTimeCell = ({ curr, prev, max, min }) => {
+const LinkTimeCell = ({ curr, prev, max }) => {
   let diff = !!curr && !!prev ? curr - prev : null
-  if ((!!max && diff > max) || (!!min && diff < min)) {
+  if (!!max && diff > max) {
     diff = null
   }
   return (
     <td className="LinkTimeCell">
-      {curr} {diff !== null && `(+${diff}ms)`}
+      {curr && moment(curr).format('h:mm:ss.SSSS')}{' '}
+      {diff !== null && `(+${diff}ms)`}
     </td>
   )
 }
@@ -21,7 +23,11 @@ const LinkRow = ({ page }) => (
       <Link to={page.href}>{page.name}</Link>
     </td>
     <LinkTimeCell curr={page.registered} />
-    <LinkTimeCell curr={page.requested} prev={page.registered} />
+    <LinkTimeCell
+      curr={page.requested}
+      prev={page.registered}
+      max={page.href === '/pre/delay' ? null : 1000}
+    />
     <LinkTimeCell curr={page.loaded} prev={page.requested} />
   </tr>
 )
