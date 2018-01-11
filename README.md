@@ -1,5 +1,3 @@
-https://github.com/de314/demo-modular-react
-
 # Demo Modular React
 
 I did the thing from (this awesome article)[https://scotch.io/tutorials/lazy-loading-routes-in-react].
