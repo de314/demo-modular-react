@@ -23,6 +23,7 @@ const slowNetworkComp = (getImport, options, info, delay) => {
   )
 }
 
+// This does the same thing as `toAsyncComp` but add Redux dispatch actions
 const toComp = (getImport, options, info) => {
   const { name, href } = info
   store.dispatch(pageRegistered(name, href))
@@ -34,6 +35,9 @@ const toComp = (getImport, options, info) => {
     })
   }, options)
 }
+
+const toAsyncComp = (getImport, options) =>
+  asAsync(() => getImport().then(module => module.default), options)
 
 const toInfo = (name, href) => ({ name, href })
 
