@@ -13,3 +13,24 @@ But if you are interested in the meat of the functionality then take a look at `
 and `src/Routes.js`. Let me know if you want more details but they are pretty well commented.
 This project really just takes the above article to the next level by adding preloading,
 and metrics.
+
+### Installation and Usage
+
+Its a `create-react-app` so just
+
+```
+git clone https://github.com/de314/demo-modular-react.git
+cd demo-modular-react
+npm start
+echo 'Go to http://localhost:3000/'
+echo 'Take a look at ./src/Routes.js to get started loading your own async components!'
+```
+
+### Development
+
+Feel free to contribute, request more details, or more functionality
+
+```
+# Push the gh-pages
+npm run publish
+```
